@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 330 100% 98%;        /* soft pink background */
+  --foreground: 330 20% 20%;        /* dark plum text */
+  --card: 330 50% 100%;             /* light pink/white cards */
+  --card-foreground: 330 30% 20%;
+
+  --popover: 330 100% 98%;
+  --popover-foreground: 330 30% 20%;
+
+  --primary: 320 65% 55%;           /* rose pink */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 270 45% 90%;         /* lavender */
+  --secondary-foreground: 270 20% 30%;
+
+  --muted: 320 40% 92%;             /* muted pink */
+  --muted-foreground: 320 20% 40%;
+
+  --accent: 280 65% 70%;            /* soft violet */
+  --accent-foreground: 280 20% 20%;
+
+  --destructive: 0 75% 60%;         
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 320 30% 85%;
+  --input: 320 30% 85%;
+  --ring: 320 65% 55%;
+  --radius: 1rem;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: 'Poppins', sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #f472b6, #c084fc, #f9a8d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
