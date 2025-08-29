@@ -2,9 +2,9 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo } from "react";
-import { Dancing_Script } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 
-const dancingScript = Dancing_Script({ subsets: ["latin"], weight: ["600","700"] });
+const playfairDisplay = Playfair_Display({ subsets: ["latin"], weight: ["600","700","800"] });
 
 type SplashProps = {
   onFinish: () => void;
@@ -72,7 +72,7 @@ export default function SplashScreen({
         animate={prefersReduced ? { opacity: 1 } : { opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className={"text-4xl sm:text-5xl md:text-6xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-rose-500 via-pink-500 to-violet-500 drop-shadow " + dancingScript.className}>
+        <div className={"text-center mx-auto max-w-screen-md px-6 text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-rose-500 via-pink-500 to-violet-500 drop-shadow " + playfairDisplay.className}>
           {message ?? "Welcome to Dhanashree’s Portfolio"}
         </div>
       </motion.div>
