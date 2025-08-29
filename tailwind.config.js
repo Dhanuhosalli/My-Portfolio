@@ -51,6 +51,26 @@ module.exports = {
           sm: "calc(var(--radius) - 4px)",
         },
         keyframes: {
+          fadeIn: {
+            from: { opacity: "0" },
+            to: { opacity: "1" },
+          },
+          slideUp: {
+            from: { transform: "translateY(16px)", opacity: "0" },
+            to: { transform: "translateY(0)", opacity: "1" },
+          },
+          slideDown: {
+            from: { transform: "translateY(-16px)", opacity: "0" },
+            to: { transform: "translateY(0)", opacity: "1" },
+          },
+          slideIn: {
+            from: { transform: "translateX(16px)", opacity: "0" },
+            to: { transform: "translateX(0)", opacity: "1" },
+          },
+          scaleIn: {
+            from: { transform: "scale(0.96)", opacity: "0" },
+            to: { transform: "scale(1)", opacity: "1" },
+          },
           "accordion-down": {
             from: { height: "0" },
             to: { height: "var(--radix-accordion-content-height)" },
@@ -61,6 +81,11 @@ module.exports = {
           },
         },
         animation: {
+          fadeIn: "fadeIn 0.6s ease-out both",
+          slideUp: "slideUp 0.6s ease-out both",
+          slideDown: "slideDown 0.6s ease-out both",
+          slideIn: "slideIn 0.6s ease-out both",
+          scaleIn: "scaleIn 0.6s ease-out both",
           "accordion-down": "accordion-down 0.2s ease-out",
           "accordion-up": "accordion-up 0.2s ease-out",
         },

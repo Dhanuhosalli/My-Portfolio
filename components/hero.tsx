@@ -2,6 +2,7 @@
 
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
+import Reveal from "./reveal";
 import { Github, Linkedin, Instagram } from "lucide-react";
 import Image from "next/image";
 
@@ -11,12 +12,7 @@ export default function Hero() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
         {/* Text Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="space-y-6"
-        >
+        <Reveal className="space-y-6">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-snug">
             Hi, I&apos;m <span className="gradient-text">Dhanashree S Hosalli</span>
           </h1>
@@ -48,7 +44,7 @@ export default function Hero() {
           <div className="text-sm text-muted-foreground">
             Based in Hubli, Karnataka, India • Email: dhanashreehosalli3@gmail.com • +91 8971303105
           </div>
-        </motion.div>
+        </Reveal>
 
         {/* Image Section */}
         <motion.div
